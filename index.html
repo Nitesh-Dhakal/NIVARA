@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivara - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .logo {
+            margin-top: 5px;
+            width: 25%;
+        }
+        .menu-dot {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+        }
+        .navbar {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1;
+        }
+        .navbar a {
+            color: #4CAF50;
+            text-decoration: none;
+            padding: 8px 15px;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #f0f0f0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .donation-box, .signup-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .donation-box input, .signup-box input {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        .donation-box button, .signup-box button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .donation-box button:hover, .signup-box button:hover {
+            background-color: #45a049;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        h1 {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Shagun\Downloads\NIVARA-removebg-preview.png" class="logo">
+        <h1>Welcome to Nivara</h1>
+    </header>
+
+    <div class="menu-dot" onclick="toggleMenu()">⬤</div>
+
+    <div class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="donate.html">Donate</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+    
+    <section class="container">
+        <h2>Our Mission</h2>
+        <p>At Nivara, we aim to reduce food waste and provide meals to the needy.</p>
+        <p>We connect restaurants and individuals with surplus food to those who need it.</p>
+        <p>Our platform ensures efficient and safe food distribution.</p>
+        <p>We believe in sustainability and community-driven impact.</p>
+        <p>Join us in our mission to end hunger and reduce food wastage.</p>
+    </section>
+    
+    <section class="donation-box">
+        <h2>Donate Now</h2>
+        <input type="number" placeholder="Enter amount" min="1">
+        <br>
+        <button>Donate</button>
+      
+    </section>
+    <br>
+    <br>
+    <br>
+    
+    
+        <a href="signup.html">Sign Up</a>
+
+    </section>
+    
+    <section class="contact">
+        <p>Contact us: +123 456 7890</p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
+

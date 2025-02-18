@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nivara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .logo {
+            margin-top: 5px;
+            width: 25%;
+        }
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .menu-dot {
+            width: 40px;
+            height: 40px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .menu-options a {
+            display: block;
+            padding: 10px 20px;
+            color: #4CAF50;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-options a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Shagun\Downloads\NIVARA-removebg-preview.png" class="logo">
+        <h1>About Nivara</h1>
+    </header>
+    
+    <div class="menu-container">
+        <div class="menu-dot" onclick="toggleMenu()">&#8226;</div>
+        <div class="menu-options" id="menuOptions">
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </div>
+    
+    <section class="container">
+        <h2>Our Mission</h2>
+        <div class="about-section">
+            <p>Nivara strives to reduce food waste by connecting those who have excess food with those in need.</p>
+            <p>We believe that no one should go hungry, and through our platform, we aim to make a difference in the lives of needy individuals and families.</p>
+            <p>Our initiative allows restaurants, businesses, and individuals to donate surplus food, ensuring that it reaches those who require it the most.</p>
+            <p>Additionally, we provide an easy way for generous donors to contribute financially, helping us maintain and expand our operations.</p>
+            <p>Together, we can work towards a hunger-free community and contribute to a sustainable future.</p>
+            <button class="donate-btn" onclick="window.location.href='donate.html'">Donate Now</button>
+        </div>
+    </section>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuOptions");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
