@@ -1,0 +1,47 @@
+<html>
+<head>
+style{
+
+}
+</head>
+<body>
+<h2>Recipes for Expiring Products</h2>
+<div id="recipeList"></div>
+
+<script>
+function fetchRecipe(productName) {
+    let recipes = {
+        "Milk": ["Pancakes", "Milkshake", "Rice Pudding"],
+        "Bread": ["French Toast", "Bread Pudding", "Garlic Bread"],
+        "Tomato": ["Tomato Soup", "Pasta Sauce", "Tomato Bruschetta"],
+        "Cheese": ["Grilled Cheese", "Cheese Pasta", "Cheese Omelet"]
+    };
+
+    return recipes[productName] || ["No recipes found"];
+}
+
+function showRecipes() {
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+    let today = new Date();
+    let recipeList = document.getElementById("recipeList");
+    recipeList.innerHTML = "";
+
+    products.forEach(product => {
+        let expiry = new Date(product.expiry);
+        let daysLeft = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+
+        if (daysLeft <= 3 && daysLeft >= 0) {
+            let recipes = fetchRecipe(product.name);
+            recipeList.innerHTML += `<h3>${product.name} (Expires in ${daysLeft} days)</h3>`;
+            recipes.forEach(recipe => {
+                recipeList.innerHTML += `<li>${recipe}</li>`;
+            });
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", showRecipes);
+</script>
+
+</body>
+</html>

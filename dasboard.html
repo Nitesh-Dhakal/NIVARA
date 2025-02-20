@@ -77,16 +77,36 @@
             margin-top: 5px;
             width: 25%;
         }
- .donate {
+ .container {
+    display: flex;  
+    gap: 20px; 
+    justify-content: center; /* Centers the content */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    text-align: center; /* Centers text inside elements */
+}
+
+.about-nivara {
+    width: 100%; /* Makes sure it takes full width */
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds space below */
+}
+
+.contain {
+    display: flex;  
+    gap: 20px; 
+    justify-content: space-between; /* Ensures they stay side by side */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    text-align: center; 
+    width: 100%; /* Ensures full width */
+}
+
+.donate, .expire, .recipe {
     margin-top: 20px;
     padding: 20px;
     border: 2px solid #4CAF50;
-    display: block; 
     border-radius: 10px;
-    width: 40%; 
-    margin-left: auto; 
-    margin-right: auto
-    ;     
+    width: 30%; /* Ensures three sections fit in one row */
+    background-color: #f9f9f9;
 }
 
 
@@ -117,15 +137,36 @@
             <button class="donate-btn">Donate Now</button>
         </div >
       
-        <div class="donate" >
-        <h3>Donate food</h3>
-        <p>In Nivara you can donate your extra food for the needy people .<br>
-        If you want to donate food then click on the donate food button </p>
-         <a href="donate-food.html">Donate Food</a>
-    </section>
-         <section class="contact">
-            <p>Contact us: +123 456 7890</p>
-        </section>
+<div class="contain">
+    <div class="donate">
+        <h3>Donate Food</h3>
+        <p>In Nivara, you can donate your extra food for needy people.<br>
+        If you want to donate food, click on the donate food button.</p>
+        <a href="donate-food.html">Donate Food</a>
+    </div>
+
+    <div class="expire">
+        <h3>Expiry Date Alert</h3>
+        <p>NIVARA also allows you to add details of your daily-use products.<br>
+        If the product's expiry date is near, it will alert you that
+        the product is about to expire.</p>
+        <a href="expirydate.html">Click to add product</a>
+        
+    </div>
+
+    <div class="recipe">
+        <h3>Recipe Blog</h3>
+        <p>Explore recipes to make the best use of leftover food.<br>
+        Learn how to cook delicious meals with simple ingredients.</p>
+        <a href="recepie.html">View Recipes</a>
+    </div>
+</div>
+
+<h3>Contact Number :</h3>
+ <h4>+123456789</h4>
+
+
+
 
     <script>
         function toggleMenu() {
